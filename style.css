@@ -1,0 +1,122 @@
+/* 1. Variables - Ensure these are at the very top */
+:root {
+    --bg: #c6dfff;
+    --text: #1a1a1a;
+    --accent: #6366f1;
+    --card-bg: #f8fafc;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    --bg: #0f172a;
+    --text: #f8fafc;
+    --accent: #818cf8;
+    --card-bg: #1e293b;
+}
+
+/* 2. Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease;
+    line-height: 1.6;
+}
+
+/* 3. Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background: var(--card-bg);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-links a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav-links a.active {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* 4. Layout Containers */
+.container {
+    padding: 4rem 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 10%;
+}
+
+h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+.gradient-text {
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 5. Components */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+#theme-toggle {
+    background: var(--card-bg);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 6. Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid var(--accent);
+    background-color: var(--bg);
+    border-radius: 4px;
+}
